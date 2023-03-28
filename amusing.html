@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Accommodations</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+            margin: 0px;
+            background-color: rgb(234, 241, 236);
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 25px;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+
+        * {box-sizing:border-box}
+
+        .slideshow-container {
+        max-width: 700px;
+        position: relative;
+        margin: auto;
+        margin-top: 50px;
+        }
+
+        .mySlides {
+        display: none;
+        }
+
+        .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        }
+
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+        }
+
+        .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        }
+
+        .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        }
+
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+        background-color: #717171;
+        }
+
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+        }
+
+        .first-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-1 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+        }
+
+        .second-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-2 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+        }
+
+        .third-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-3 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+        }
+
+        .fourth-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-4 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+        }
+
+        .fifth-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-5 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+            padding-bottom: 70px;
+        }
+
+
+        .heading1{
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 680px;
+            text-align: justify;
+            width: 1300px;
+        
+        }
+        .heading2{
+        margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 685px;
+            text-align: justify;
+            width: 1300px;
+        
+       }
+       
+        .heading3{
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 675px;
+            text-align: justify;
+            width: 1300px;
+        
+        }
+        .heading4{
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 630px;
+            text-align: justify;
+            width: 1300px;
+         
+       
+        }
+        .heading5 {
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 670px;
+            text-align: justify;
+            width: 1300px;
+        }
+
+        a.link1:hover,
+        a.link2:hover,
+        a.link3:hover,
+        a.link4:hover,
+        a.link5:hover {
+            color: green;
+        }
+
+        #myBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: rgb(100, 61, 61); /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+}
+
+
+        </style>
+
+    </head>
+
+
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="cuisine.html">Cuisine</a>
+            <a href="amusing.html">Amusing Adventures</a>
+            <a href="visit.html">Places to visit</a>
+            <a href="accommodation.html">Accommodation</a>
+          </div>
+          
+          <span style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+          <img src="image/amusing-main.jpg" class="intro-image" width="1470">
+
+          <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 5</div>
+              <img src="image/froggy.jpg" style="width:100%">
+              <div class="text">Froggyland Waterpark</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 5</div>
+              <img src="image/casino 2.jpg" style="width:100%">
+              <div class="text">Deltin Royale</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 5</div>
+              <img src="image/colva 2.jpg" style="width:100%">
+              <div class="text">Colva Beach</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="image/m2.jpg" style="width:100%">
+                <div class="text">The Collective Bazzar</div>
+             </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="image/snorkeling 2.webp" style="width:100%">
+                <div class="text">Suba Diving</div>
+            </div>
+        
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+          </div>
+
+          <div class="information">
+            <div class="about-postacard">
+                <img src="image/froggy2.png" class="first-image">
+             
+               <p class="heading1">Froggyland</p>
+                <p class="info-1">1. Froggyland Waterpark is a popular family-friendly waterpark located in
+                    the beautiful coastal state of Goa, India. The park boasts a range of thrilling water rides 
+                    and attractions for all ages, including the giant wave pool, lazy river, water slides, and a 
+                    dedicated play area for children. Visitors can also enjoy the park's lush green surroundings
+                     and relax in the shade of the palm trees. Froggyland Waterpark is known for its clean and well-maintained
+                      facilities, friendly staff, and affordable prices. Whether you're looking for an adrenaline-fueled day
+                       out or a relaxing break from the heat, Froggyland Waterpark is a must-visit destination in Goa.<a class="link1" href=http://www.froggylandgoa.com>Visit the websit for more details.</a></p>
+            </div>
+
+            <div class="about-w">
+                <img src="image/casino1.jpg" class="second-image">
+                <p class="heading2">Deltin Royal</p>
+                <p class="info-2">2.Deltin Royale Casino is a luxurious offshore casino located on the Mandovi River in Goa,
+                     India. The casino is spread across four levels and offers a variety of games, including poker, blackjack, 
+                     roulette, baccarat, slot machines, and more. The casino features opulent interiors, including a grand staircase, 
+                     chandeliers, and plush carpets, creating a sophisticated and upscale ambiance. The casino also has a variety of 
+                     dining options, including fine dining restaurants and bars, offering guests an extensive selection of food and drinks. 
+                     Visitors can enjoy a thrilling gaming experience in a safe and secure environment, making Deltin Royale Casino a must-visit 
+                     destination in Goa.<a class="link2" href=https://www.deltin.com/deltin-royale-casino/>Visit the websit for more details.</a></p>
+          </div>
+
+          <div class="about-leela">
+            <img src="image/colva 2.jpg" class="third-image">
+            <p class="heading3">Colva Beach</p>
+            <p class="info-3">3. Colva Beach is one of the most popular and beautiful beaches in Goa, 
+                located in the south of the state. The beach stretches for miles along the Arabian Sea 
+                and offers stunning views of the ocean. The soft white sand and palm-fringed shoreline 
+                make it a perfect spot for a leisurely walk or sunbathing. The beach is also home to a
+                 range of water sports activities, including jet skiing, parasailing, and banana boat rides.
+                  The surrounding area has many restaurants and beach shacks serving delicious Goan cuisine, 
+                  making it a great spot for a day out with friends and family.<a class="link3" href=https://www.google.com/maps/dir/43.6502528,-79.3903104/Colva+Beach/@1.8101625,-89.5324523,3z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bbfb418862d72a3:0xb5de1b202cad0935!2m2!1d73.9119945!2d15.2805316">Location</a></p>
+          </div>
+
+        <div class="about-taj">
+            <img src="image/m1.png" class="fourth-image">
+            <p class="heading4"> GoaCollective Bazaar</p>
+            <p class="info-4">4. The Goa Collective Bazaar is a vibrant and colorful market located in
+                 the heart of Anjuna, Goa. The market features a wide range of stalls selling handmade crafts,
+                  clothing, jewelry, and other unique items made by local artisans. Visitors can browse through 
+                  the stalls, interact with the artists, and purchase souvenirs to take home. The market also 
+                  has a variety of food and beverage stalls serving delicious local and international cuisine.
+                   The Goa Collective Bazaar is known for its lively atmosphere, great music, and community spirit, 
+                   making it a must-visit destination for anyone looking for a unique shopping and cultural experience in Goa.<a class="link4" href=https://www.google.com/maps?client=safari&rls=en&oe=UTF-8&um=1&ie=UTF-8&fb=1&gl=ca&sa=X&geocode=KakLhf3q6b87MQLLxxcZgrH0&daddr=Hilltop,+Vagator,+Goa+403509,+India">Location</a></p>
+        </div>
+
+        <div class="about-casa">
+            <img src="image/snorkeling1.webp" class="fifth-image">
+            <p class="heading5">Scuba Diving</p>
+            <p class="info-5">5. Goa Diving is a popular diving school 
+                located in Calangute, Goa that offers scuba diving courses 
+                for beginners and experienced divers. The school provides 
+                training in a safe and controlled environment and the instructors
+                 are highly experienced and certified. Goa Diving offers a range of 
+                 diving experiences, including wreck dives, reef dives, and night dives. 
+                 The waters around Goa are home to a diverse range of marine life, including 
+                 coral reefs, sea turtles, and colorful fish, making it an ideal location for diving enthusiasts. 
+                 The diving season in Goa is from October to May, with the best visibility and conditions during the winter months.<a class="link5" href=https://goadiving.com/>Visit the websit for more details.</a></p>
+          </div>
+
+          <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+                    
+                    <script>
+                    function openNav() {
+                      document.getElementById("mySidenav").style.width = "250px";
+                    }
+                    
+                    function closeNav() {
+                      document.getElementById("mySidenav").style.width = "0";
+                    }
+
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    // Next/previous controls
+                    function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                    }
+
+                    // Thumbnail image controls
+                    function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1} 
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none"; 
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block"; 
+                    dots[slideIndex-1].className += " active";
+                    }
+
+                  
+                let mybutton = document.getElementById("myBtn");
+
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+
+                function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+                }
+                 // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                }
+                    </script>
+
+    </body>
+</html>

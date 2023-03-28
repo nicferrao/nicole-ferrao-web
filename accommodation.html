@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Accommodations</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+            margin: 0px;
+            background-color: rgb(194, 201, 186);
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 25px;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+
+        * {box-sizing:border-box}
+
+        .slideshow-container {
+        max-width: 700px;
+        position: relative;
+        margin: auto;
+        margin-top: 50px;
+        }
+
+        .mySlides {
+        display: none;
+        }
+
+        .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        }
+
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+        }
+
+        .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        }
+
+        .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        }
+
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+        background-color: #717171;
+        }
+
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+        }
+
+        .first-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-1 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+        }
+
+        .second-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-2 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+        }
+
+        .third-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-3 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+        }
+
+        .fourth-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-4 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+        }
+
+        .fifth-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-5 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+            padding-bottom: 70px;
+        }
+
+
+        .heading1{
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 645px;
+            text-align: justify;
+            width: 1300px;
+        
+        }
+        .heading2{
+        margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 715px;
+            text-align: justify;
+            width: 1300px;
+        
+       }
+       
+        .heading3{
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 680px;
+            text-align: justify;
+            width: 1300px;
+        
+        }
+        .heading4{
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 630px;
+            text-align: justify;
+            width: 1300px;
+         
+       
+        }
+        .heading5 {
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 650px;
+            text-align: justify;
+            width: 1300px;
+        
+            
+            
+
+        }
+
+        a.link1:hover,
+        a.link2:hover,
+        a.link3:hover,
+        a.link4:hover,
+        a.link5:hover {
+            color: yellow;
+        }
+
+        #myBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: rgb(100, 61, 61); /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+}
+
+
+        </style>
+
+    </head>
+
+
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="cuisine.html">Cuisine</a>
+            <a href="amusing.html">Amusing Adventures</a>
+            <a href="visit.html">Places to visit</a>
+            <a href="accommodation.html">Accommodation</a>
+          </div>
+          
+          <span style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+          <img src="image/accomo-main.jpg" class="intro-image" width="1470">
+
+          <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 5</div>
+              <img src="image/postcard.jpg" style="width:100%">
+              <div class="text">The Postcard Velha</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 5</div>
+              <img src="image/W.jpg.webp" style="width:100%">
+              <div class="text">The W Goa</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 5</div>
+              <img src="image/leela.jpg.webp" style="width:100%">
+              <div class="text">The Leela Goa</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="image/Taj.jpeg" style="width:100%">
+                <div class="text">Taj Exotica Resort & Spa, Goa</div>
+             </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="image/casa.JPG" style="width:100%">
+                <div class="text">CASA ABILIO SOUSA</div>
+            </div>
+        
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+          </div>
+
+          <div class="information">
+            <div class="about-postacard">
+                <img src="image/post.jpg" class="first-image">
+             
+               <p class="heading1">The Postcard Velha</p>
+                <p class="info-1">1. The Postcard Velha - Situated in the historic town of 
+                    Velha Goa, a UNESCO World Heritage Site, The Postcard Velha offers a 
+                    luxurious and charming retreat. This boutique hotel features nine elegantly 
+                    designed rooms, an outdoor pool, and a gourmet restaurant that serves 
+                    locally inspired dishes. The Postcard Velha provides a perfect blend of 
+                    history, culture, and luxury for a unique and memorable stay in Goa. Guests 
+                    can explore nearby attractions like the Basilica of Bom Jesus, the Se Cathedral, 
+                    or take a leisurely walk around the charming town of Velha Goa. With its 
+                    unmatched charm and warm hospitality, The Postcard Velha is a must-visit 
+                    for those seeking an intimate and unforgettable stay in Goa.<a class="link1" href=http://www.postcardresorts.com/hotels/the-postcard-velha>Visit the websit for more details.</a></p>
+            </div>
+
+            <div class="about-w">
+                <img src="image/replacement.jpg" class="second-image">
+                <p class="heading2">W Goa</p>
+                <p class="info-2">2. W Goa - Located on the picturesque Vagator Beach in North 
+                    Goa, W Goa offers a trendy and chic experience like no other. The resort's 
+                    design reflects the vibrant culture of Goa, with uniquely styled rooms and 
+                    suites. W Goa features a range of amenities, including a spa, fitness center, 
+                    multiple dining options, and a vibrant nightlife scene. The resort's proximity 
+                    to the beach provides ample opportunities for water sports, sunbathing, or 
+                    taking a leisurely walk. W Goa is the perfect choice for those looking for a 
+                    stylish and modern stay in the heart of North Goa.<a class="link2" href=http://www.marriott.com/en-us/hotels/goiwh-w-goa/overview/?scidf2ae0541-1279-4f24-b197-a979c79310b0>Visit the websit for more details.</a></p>
+          </div>
+
+          <div class="about-leela">
+            <img src="image/the-leela-goa-cavelossim-003-59061-1110x700.jpg" class="third-image">
+            <p class="heading3">Leela Goa</p>
+            <p class="info-3">3. The Leela Goa - Situated in the serene Mobor Beach in South 
+                Goa, The Leela Goa offers a truly luxurious experience. This elegant beachfront 
+                resort is spread over 75 acres of lush landscaped gardens, with a range of rooms, 
+                suites, and villas. Each accommodation features modern amenities, including private 
+                plunge pools, spa, fitness center, and multiple dining options. The resort also 
+                provides exclusive access to a private 12-hole golf course. With its breathtaking 
+                views, impeccable service, and exceptional amenities, The Leela Goa is an idyllic 
+                getaway for those seeking a truly indulgent vacation.<a class="link3" href=https://www.theleela.com/">Visit the websit for more details.</a></p>
+          </div>
+
+        <div class="about-taj">
+            <img src="image/Taj-Exotica-Resort-Spa-Goa-tennis-travel.jpg" class="fourth-image">
+            <p class="heading4">Taj Exotica Resort & Spa</p>
+            <p class="info-4">4. Taj Exotica Resort & Spa, Goa - This lavish beachfront resort 
+                offers a magnificent setting on Varca Beach in South Goa. The Taj Exotica Resort 
+                & Spa features elegant rooms and suites with private balconies, a stunning outdoor 
+                pool, a luxurious spa, fitness center, and an array of dining options. The resort's 
+                proximity to the beach makes it a great place to indulge in water sports, sunbathing, 
+                or simply strolling along the shore. Guests can also explore nearby attractions 
+                like the historic churches of Old Goa or take a sunset cruise along the Mandovi River. 
+                With impeccable service and an unforgettable experience, Taj Exotica Resort & Spa is 
+                a true gem of Goa.<a class="link4" href=https://www.tajhotels.com/en-in/taj/taj-exotica-goa/">Visit the websit for more details.</a></p>
+        </div>
+
+        <div class="about-casa">
+            <img src="image/erlick.JPG" class="fifth-image">
+            <p class="heading5">Casa Abilio Sousa</p>
+            <p class="info-5">5. CASA ABILIO SOUSA is a beautiful heritage guesthouse located in the 
+                historic village of Quepem in South Goa. This 100-year-old Portuguese villa has been 
+                restored and converted into a charming guesthouse with six tastefully decorated rooms. 
+                The rooms feature antique furniture, high ceilings, and beautiful tilework, reflecting 
+                the rich cultural heritage of Goa. The guesthouse also features a lush garden, a cozy library, and a lounge area that offers a perfect spot to relax 
+                and unwind. CASA ABILIO SOUSA is a wonderful place to experience the history and charm 
+                of Goa while enjoying modern amenities and exceptional hospitality.<a class="link5" href=https://casa-abilio-de-sousa.business.site>Visit the websit for more details.</a></p>
+          </div>
+
+          <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+                    
+                    <script>
+                    function openNav() {
+                      document.getElementById("mySidenav").style.width = "250px";
+                    }
+                    
+                    function closeNav() {
+                      document.getElementById("mySidenav").style.width = "0";
+                    }
+
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    // Next/previous controls
+                    function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                    }
+
+                    // Thumbnail image controls
+                    function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1} 
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none"; 
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block"; 
+                    dots[slideIndex-1].className += " active";
+                    }
+
+                  
+                let mybutton = document.getElementById("myBtn");
+
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+
+                function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+                }
+                 // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                }
+                    </script>
+
+    </body>
+</html>

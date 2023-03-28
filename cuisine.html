@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cuisine</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+            margin: 0px;
+            background-color: rgb(253, 227, 193);
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 25px;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+
+        * {box-sizing:border-box}
+
+        .slideshow-container {
+        max-width: 700px;
+        position: relative;
+        margin: auto;
+        margin-top: 50px;
+        }
+
+        .mySlides {
+        display: none;
+        }
+
+        .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        }
+
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+        }
+
+        .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        }
+
+        .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        }
+
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+        background-color: #717171;
+        }
+
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+        }
+
+        .first-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 100px;
+        }
+
+        .info-1 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+        }
+
+        .second-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-2 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+        }
+
+        .third-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-3 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+        }
+
+        .fourth-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-4 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+        }
+
+        .fifth-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-5 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+            padding-bottom: 70px;
+        }
+        .heading1{
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 690px;
+            text-align: justify;
+            width: 1300px;
+        
+        }
+        .heading2{
+        margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 681px;
+            text-align: justify;
+            width: 1300px;
+        
+       }
+       
+        .heading3{
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 680px;
+            text-align: justify;
+            width: 1300px;
+        
+        }
+        .heading4{
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 530px;
+            text-align: justify;
+            width: 1300px;
+         
+       
+        }
+        .heading5 {
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 650px;
+            text-align: justify;
+            width: 1300px;
+        }
+
+        a.link1:hover,
+        a.link2:hover,
+        a.link3:hover,
+        a.link4:hover,
+        a.link5:hover {
+            color: maroon;
+        }
+
+        #myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+#myBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: rgb(100, 61, 61); /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+}
+        </style>
+
+    </head>
+
+
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="cuisine.html">Cuisine</a>
+            <a href="amusing.html">Amusing Adventures</a>
+            <a href="visit.html">Places to visit</a>
+            <a href="accommodation.html">Accommodation</a>
+          </div>
+          
+          <span style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+          <img src="image/cusine-main.jpg" class="intro-image" width="1470">
+
+          <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 5</div>
+              <img src="image/tha 3.jpg" style="width:100%">
+              <div class="text">Thalassa</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 5</div>
+              <img src="image/prawns-tempura-roll.jpg" style="width:100%">
+              <div class="text">Mama Miso</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 5</div>
+              <img src="image/fish-thali.jpg" style="width:100%">
+              <div class="text">Ritz Classic</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="image/burger.jpeg" style="width:100%">
+                <div class="text">Cuebebar The Original SmokeHouse</div>
+             </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="image/pasta.jpg" style="width:100%">
+                <div class="text">Beno</div>
+            </div>
+        
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+          </div>
+
+          <div class="information">
+            <div class="about-thalassa">
+                <img src="image/thalassa.jpg" class="first-image">
+                <p class="heading1">Thalassa</p>               
+                 <p class="info-1">1. Thalassa is a renowned beachside restaurant located in 
+                    Siolim, Goa, known for its Greek and Mediterranean cuisine. The restaurant 
+                    is situated in a picturesque setting overlooking the Arabian Sea, with an 
+                    inviting ambiance that attracts tourists and locals alike. The menu offers 
+                    an array of delicious seafood dishes, mezze platters, and cocktails, prepared 
+                    using fresh and locally sourced ingredients. Thalassa also hosts live music 
+                    events and parties, making it a go-to spot for those looking to unwind and 
+                    indulge in good food, drinks, and entertainment. The friendly staff and 
+                    impeccable service further enhance the dining experience, making Thalassa 
+                    a must-visit destination in Goa. <a class="link1" href=http://www.thalassaindia.com/">Visit Thalassa for more info.</a></p>
+                  
+
+
+            </div>
+
+            <div class="about-mama">
+                <img src="image/mama.jpg" class="second-image">
+                <p class="heading2">Mama Miso</p>
+                <p class="info-2">2. Mama Miso is a charming Japanese and Asian fusion restaurant 
+                    located in Arossim, Goa. The restaurant offers a unique blend of Japanese and 
+                    Asian cuisine, prepared using authentic ingredients. The menu includes a variety 
+                    of sushi, sashimi, ramen, and stir-fry dishes that are sure to tantalize your 
+                    taste buds. The ambiance is warm and inviting, with traditional Japanese decor 
+                    and comfortable seating. The staff is courteous and knowledgeable, making the 
+                    dining experience all the more enjoyable. Mama Miso is the perfect spot for those 
+                    looking for an exquisite Japanese and Asian culinary experience in Goa.<a class="link4" href=https://www.google.com/maps/place/Mama+Miso/@15.4195344,73.8059213,11.94z/data=!4m20!1m13!4m12!1m4!2m2!1d73.8301322!2d15.4935956!4e1!1m6!1m2!1s0x3bbfb7e97ce208d7:0x4715cf0ec9b5f427!2smama+miso!2m2!1d73.8968741!2d15.3356951!3m5!1s0x3bbfb7e97ce208d7:0x4715cf0ec9b5f427!8m2!3d15.3356908!4d73.8968737!16s%2Fg%2F11rpq3667f//">Visit Mama Miso for more info.</a></p></p>
+          </div>
+
+          <div class="about-ritz">
+            <img src="image/ritz t.jpg" class="third-image">
+            <p class="heading3">Ritz Classic</p>
+            <p class="info-3">3. Ritz Classic is a well-known restaurant chain in Goa that offers 
+                a delectable range of Goan cuisine. With multiple locations across the state, Ritz 
+                Classic is a go-to spot for locals and tourists alike. The menu boasts of an extensive 
+                range of dishes, including popular favorites such as tandoori chicken, butter garlic 
+                prawns, and fresh fried fish. The restaurants have a cozy and inviting ambiance, with 
+                comfortable seating and prompt service. The staff is friendly and  ensuring a pleasant 
+                dining experience for all patrons. Ritz Classic is a place for those looking for a 
+                taste of authentic Goan Cuisine.<a class="link2" href=http://www.ritzclassic.com/">Visit Ritz Classic for more info.</a></p>
+                
+          </div>
+
+        <div class="about-cuebebar">
+            <img src="image/corn.jpg.webp" class="fourth-image">
+            <p class="heading4">Cuebebar The Original SmokeHouse</p>
+            <p class="info-4">4. A must-visit for steak lovers in Goa is Cuebebar The Original 
+                SmokeHouse, a popular restaurant specializing in smoked and grilled meats. The 
+                menu features a wide variety of dishes, ranging from succulent ribs to juicy 
+                burgers, all cooked to perfection using traditional smoking and grilling techniques. 
+                With its rustic decor and lively ambiance, Cuebebar The Original SmokeHouse provides 
+                a unique dining experience that is perfect for a night out with friends or a romantic 
+                dinner for two. The attentive staff is always available to offer recommendations and 
+                ensure that every guest is satisfied with their meal. For an unforgettable steakhouse 
+                experience in Goa, look no further than Cuebebar The Original SmokeHouse.<a class="link3" href=https://www.google.com/maps/reserve/v/dine/c/m4MgLH6jz_o?source=pa&hl=en-CA&gei=2-AhZOTLLsipptQPh4mpmA4&sourceurl=https://www.google.com/search?client%3Dsafari%26rls%3Den%26q%3DCuebebar%2BThe%2BOriginal%2BSmokeHouse%2Bfood%26ie%3DUTF-8%26oe%3DUTF-8/">Visit Cuebebar The Original SmokeHouse for more info.</a></p>
+        </div>
+
+        <div class="about-beno">
+            <img src="image/beno out.jpg.webp" class="fifth-image">
+            <p class="heading5">Beno Restaurant</p>
+            <p class="info-5">5. Beno is a delightful restaurant in Goa that offers an array of 
+                mouth-watering dishes on its menu. From the classic Caprese salad to the creamy 
+                risotto, every dish is made using fresh, locally sourced ingredients. The restaurant 
+                has a warm and inviting ambiance, with tasteful decor and comfortable seating that 
+                create a cozy and intimate dining experience. The ambiance is perfect for a romantic 
+                dinner or a relaxing meal with friends and family. Beno also offers an extensive selection 
+                of wines, cocktails, and mocktails to complement your meal. With its friendly staff 
+                and relaxed atmosphere, Beno is a must-visit for those looking to enjoy great food 
+                and a pleasant dining experience in Goa.<a class="link5" href= https://www.instagram.com/beno.goa/?hl=en/">Visit Beno for more info.</a></p>
+               
+          </div>
+          <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+                    
+                    <script>
+                    function openNav() {
+                      document.getElementById("mySidenav").style.width = "250px";
+                    }
+                    
+                    function closeNav() {
+                      document.getElementById("mySidenav").style.width = "0";
+                    }
+
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    // Next/previous controls
+                    function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                    }
+
+                    // Thumbnail image controls
+                    function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1} 
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none"; 
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block"; 
+                    dots[slideIndex-1].className += " active";
+                    }
+                    
+                    
+                    let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+} else {
+    mybutton.style.display = "none";
+}
+}
+ // When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+                    </script>
+
+    </body>
+</html>

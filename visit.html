@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Places To visit</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+
+
+        <style>
+            body {
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+            margin: 0px;
+            background-color: rgb(243, 225, 205);
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 25px;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+
+
+        * {box-sizing:border-box}
+
+        .slideshow-container {
+        max-width: 700px;
+        position: relative;
+        margin: auto;
+        margin-top: 50px;
+        }
+
+        .mySlides {
+        display: none;
+        }
+
+        .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        }
+
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+        }
+
+        .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        }
+
+        .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        }
+
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+        background-color: #717171;
+        }
+
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+        }
+
+        .first-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-1 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+        }
+
+        .second-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-2 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+        }
+
+        .third-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-3 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+        }
+
+        .fourth-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-4 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+        }
+
+        .fifth-image {
+            width: 700px;
+            margin-left: 389px;
+            margin-top: 70px;
+        }
+
+        .info-5 {
+            margin-top: 50px;
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 150px;
+            text-align: justify;
+            width: 1300px;
+            line-height: 40px;
+            padding-bottom: 70px;
+        }
+        .heading1{
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 655px;
+            text-align: justify;
+            width: 1300px;
+            
+        }
+
+        .heading2{
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 615px;
+            text-align: justify;
+            width: 1300px;
+            
+        }
+
+        .heading3{
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 645px;
+            text-align: justify;
+            width: 1300px;
+            
+        }
+
+        .heading4{
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 675px;
+            text-align: justify;
+            width: 1300px;
+            
+        }
+        .heading5{
+            margin-top: 15px;
+            font-family:'Alkatra',cursive;
+            font-size: 26px;
+            padding-left: 660px;
+            text-align: justify;
+            width: 1300px;
+            
+        }
+
+        a.link1:hover,
+        a.link2:hover,
+        a.link3:hover,
+        a.link4:hover,
+        a.link5:hover {
+            color: brown;
+        }
+
+        #myBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: rgb(100, 61, 61); /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+       
+
+
+        </style>
+
+    </head>
+
+
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="cuisine.html">Cuisine</a>
+            <a href="amusing.html">Amusing Adventures</a>
+            <a href="visit.html">Places to visit</a>
+            <a href="accommodation.html">Accommodation</a>
+          </div>
+          
+          <span style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+          <img src="image/PV.jpg" class="intro-image" width="1470">
+
+          <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 5</div>
+              <img src="image/butterfly.jpg" style="width:100%">
+              <div class="text">Butterfly Beach</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 5</div>
+              <img src="image/basilica.jpg" style="width:100%">
+              <div class="text">Basilica of Bom Jesus</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 5</div>
+              <img src="image/dudhsagar.jpg" style="width:100%">
+              <div class="text">Dudhsagar Falls</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="image/sarzora.jpg" style="width:100%">
+                <div class="text">Sarzora Lake</div>
+             </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="image/cabo.jpg" style="width:100%">
+                <div class="text">Cabo De Rama</div>
+            </div>
+        
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+          </div>
+
+          <div class="information">
+            <div class="about-butterfly">
+                <img src="image/butterfly-beach expo.jpg" class="first-image">
+                <p class="heading1">Butterfly Beach</p>
+                <p class="info-1">1. Butterfly Beach is a serene and secluded destination in the south of 
+                    Goa that is truly worth a visit. Accessible only by boat, the beach 
+                    offers exclusivity and a unique experience for its visitors. The name 
+                    of the beach comes from the butterflies that flutter around the lush 
+                    greenery that surrounds it. The crystal-clear waters of the Arabian 
+                    Sea offer perfect swimming, snorkeling, and water sports opportunities, 
+                    while the soft sands are ideal for sunbathing and relaxation. Butterfly 
+                    Beach provides a peaceful escape from the hustle and bustle of city life, 
+                    allowing visitors to appreciate the beauty of nature. It's a serene and 
+                    unforgettable experience that shouldn't be missed when in Goa.<a class="link1" href=https://www.google.com/maps/dir/43.7190656,-79.7310976/butterfly+beach+goa/@1.8047866,-89.6549931,3z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bbe4f8a16e887f1:0x894249fead443527!2m2!1d74.001647!2d15.0196019?hl=en/">Location</a></p>
+            </div>
+
+            <div class="about-basilica">
+                <img src="image/inside-bom-jesus-oldgoa.jpg" class="second-image">
+                <p class="heading2">Basilica of Bom Jesus</p>
+                <p class="info-2">2. The Basilica of Bom Jesus is a UNESCO World Heritage 
+                    site located in Old Goa, India, and is a significant historical and 
+                    religious landmark. This beautiful church is renowned for its Baroque 
+                    architecture and houses the remains of St. Francis Xavier, the patron saint of G
+                    oa, in a silver casket. Visitors can marvel at the exquisite paintings, sculptures, 
+                    and decorations within the church's stunning interior, including beautiful marble 
+                    and precious stones. The Basilica of Bom Jesus holds significant religious 
+                    significance for Catholics worldwide and is a destination that provides a deep 
+                    appreciation for Goa's rich cultural and historical heritage.<a class="link2" href=https://www.google.com/maps/dir//Old+Goa+Road,+Bainguinim,+Goa+403402,+India/@15.4752305,73.8441837,11.65z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bbfbef2b99b0289:0x1e8056689f15a7b8!2m2!1d73.9116272!2d15.5008938?hl=en/">Location</a></p>
+                
+          </div>
+
+          <div class="about-dudhsagar">
+            <img src="image/dudhsagar-waterfall-goa-entry-fee-timings-holidays-reviews-header.jpg" class="third-image">
+            <p class="heading3">Dudhsagar Falls</p>
+            <p class="info-3">3. Dudhsagar Falls, meaning "sea of milk," is a four-tiered waterfall 
+                located on the Mandovi River in Goa. It is one of the tallest waterfalls in India, 
+                with a height of approximately 310 meters. The waterfall's milky-white appearance 
+                is due to the frothy water cascading over the steep rocky terrain. Visitors can 
+                enjoy the stunning natural beauty of the falls and take a dip in the cool waters of 
+                the pool at the foot of the falls. Dudhsagar Falls is a popular tourist destination 
+                and attracts visitors from all over the world, offering a breathtaking experience 
+                that is not to be missed when visiting Goa.<a class="link3" href=https://www.google.com/maps?client=safari&bih=840&biw=1470&hl=en&sxsrf=APwXEddIKX2ECQIbJMEe5El3Ab8OqHkuiA:1679944098468&uact=5&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzINCC4QigUQxwEQrwEQQzIFCAAQgAQyBQgAEIAEMgUIABCABDIKCAAQgAQQFBCHAjIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEOgoILhCvARDHARAnOgQIIxAnOgcIABCKBRBDOg0ILhDHARCvARDqAhAnOgcIIxDqAhAnOg8IABCKBRDqAhC0AhBDGAE6FQguEIoFEMcBEK8BEOoCELQCEEMYAUoECEEYAFCeC1jgH2DrImgDcAB4AoAB2QGIAZYRkgEGMC4xNi4xmAEAoAEBoAECsAEUwAEB2gEGCAEQARgB&um=1&ie=UTF-8&fb=1&gl=ca&sa=X&geocode=KUOLKxQYpr87MSUCOyjnSJT9&daddr=Sonaulim,+Goa+403410,+India/"> Location</a></p>
+           
+          </div>
+
+        <div class="about-sarzora">
+            <img src="image/sl.JPG" class="fourth-image">
+            <p class="heading4">Sarzora Lake</p>
+            <p class="info-4">4. Sarzora Lake, also known as the Heart-Shaped Lake, is a breathtaking 
+                natural wonder that will leave visitors in awe. This serene and scenic freshwater 
+                lake is located in South Goa. It is a popular destination for tourists seeking a 
+                peaceful escape from the hustle and bustle of city life. The lake is surrounded by 
+                lush greenery and is a great spot for picnics, fishing, and boating. Visitors can 
+                enjoy a leisurely stroll around the lake or take a boat ride to explore its calm 
+                waters. Sarzora Lake is an ideal place to relax and unwind amidst nature, and the 
+                stunning sunset views over the lake make for a truly unforgettable experience.<a class="link4" href="https://www.tripuntold.com/goa/south-goa/sarzora-lake/"=en/">Location</a></p>
+        </div>
+
+        <div class="about-cabo">
+            <img src="image/cabo-de-rama-fort-goa-india-tourism-history.jpg" class="fifth-image">
+            <p class="heading5">Cabo de Rama</p>
+            <p class="info-5">5. Cabo de Rama is a well-preserved historical fort located at the 
+                southernmost tip of Goa. This ancient fort has a rich and fascinating history, 
+                having been ruled by various dynasties throughout the centuries. According to 
+                legend, Lord Rama and his wife Sita sought refuge in the fort during their 14-year exile. 
+                Today, the fort is a popular tourist attraction that offers stunning panoramic 
+                views of the Arabian Sea. Visitors can explore the fort's ruins and learn about 
+                its history while enjoying a peaceful walk through its gardens. Cabo de Rama is a 
+                must-visit for history buffs and nature lovers seeking a tranquil and scenic 
+                escape in Goa.<a class="link5" href="https://www.google.com/maps/dir//3WQC%2BGJ8,+Taluka+Cabo+da+Rama,+Canacona,+Goa+403702,+India/@15.0887741,73.8515528,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bbe495130375ccb:0xdc2d21076c13d75b!2m2!1d73.9215933!2d15.0887849/"=en/">Location</a></p>
+  
+           
+    
+                  </div>
+
+                  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+          
+
+                    
+                    <script>
+                    function openNav() {
+                      document.getElementById("mySidenav").style.width = "250px";
+                    }
+                    
+                    function closeNav() {
+                      document.getElementById("mySidenav").style.width = "0";
+                    }
+                    
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    // Next/previous controls
+                    function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                    }
+
+                    // Thumbnail image controls
+                    function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1} 
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none"; 
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block"; 
+                    dots[slideIndex-1].className += " active";
+                    }
+
+                    let mybutton = document.getElementById("myBtn");
+
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+
+                function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+                }
+                 // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                }
+                    
+                    </script>
+    </body>
+</html>

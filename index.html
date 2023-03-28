@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Trusty Goan Advisor</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+            margin: 0px;
+            background-color: rgb(245, 240, 232);
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 25px;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+
+        .goa-title-page {
+            width: 1500px;
+        }
+
+        .coconut {
+            width: 600px;
+            margin: 70px;
+            margin-top: 30px;
+            display: inline-block;
+            float: right;
+        }
+
+        .sub-heading {
+            font-family: 'Cinzel', serif;
+            font-size: 35px;
+            padding-left: 220px;
+            padding-top: 80px;
+        }
+
+        .para-1 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 20px;
+            text-align: justify;
+        }
+
+        .para-2 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 22px;
+            padding-left: 20px;
+            text-align: justify;
+        }
+
+        #myBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: rgb(100, 61, 61); /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+}
+
+
+</style>
+</head>
+
+    <body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="cuisine.html">Cuisine</a>
+  <a href="amusing.html">Amusing Adventures</a>
+  <a href="visit.html">Places to visit</a>
+  <a href="accommodation.html">Accommodation</a>
+</div>
+
+<span style="font-size:50px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<img class="goa-title-page" src="image/ goa.jpg">
+
+<div class="about">
+    <img class="coconut" src="image/pic.jpg">
+
+    <p class="sub-heading">History of Goa</p>
+
+    <p class="para-1">Goa is the smallest Indian state that lies on the 
+        western coast of India. Goa has a very influential historical background.Today&#39;s Goa may be one of the smallest states 
+        but it's rich in tourism, farming, 
+        fishing, and up until recently, iron ore mining playing the most 
+        important roles in the economy.</p>
+
+    <p class="para-2">The Portuguese ruled Goa for about 450 years. 
+        In 1524, The Portuguese Captain Vasco Da Gama landed in Goa and was the first European to ever reach India.
+        It was not until 1961 that the Indian Army took control of Goa and the Portuguese finally left.
+        The Portuguese heavily influenced the Goan culture, cuisine, and architecture. 
+        Most of the buildings are edifices of the city that resemble the Portuguese architectural style as they 
+        constructed several churches and forts during their administration. Goa is famous for its churches as they 
+        were built by the Portuguese in order to spread Christianity. A lot of conversions took place
+        to try to make Goa a Christian state.</p>
+
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+          
+          <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+
+          let mybutton = document.getElementById("myBtn");
+
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+
+                function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+                }
+                 // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                }
+          </script>
+
+
+        </div>
+    </body>
+</html>
